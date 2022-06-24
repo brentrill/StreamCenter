@@ -17,7 +17,7 @@ StreamCenter is markedly more complex than anything I've made before. Each diffe
 
 In order to display the most recent song from the most recent service and then display the artists in order of this date, I wrote a very pythonically intense piece of code that compares the dates and returns the list of artists in order.
 
-Because StreamCenter deals with these outside services, and because the program takes user input, there is always the possibility of failure. The app deals with empty responses from these sites gracefully. In the event that one artist or site fails to load, the app won't break and will continue to display the other content, while telling the user which site has the problem. I also had to be aware of the number of requests made to each site because some have quotas, and with many requests come performance issues so I needed to adequately optimize the code.
+Because StreamCenter communicates with these outside services, and because the program takes user input, there is always the possibility of failure. The app deals with empty responses from these sites gracefully. In the event that one artist or site fails to load, the app won't break and will continue to display the other content, while telling the user which site has the problem. I also had to be aware of the number of requests made to each site because some have quotas, and with many requests come performance issues so I needed to adequately optimize the code.
 
 The frontend is also quite complex. A lot of data is displayed at once, so there were many important design choices I had to make such as the horizontal scrolling of the embedded media, infinite scrolling, and save icons on the left of each track. The displayed tracks are not saved to the database, they are retrieved on each page reload, so I faced an interesting problem when it came to saving the tracks to the Favorites or Listen Later. I decided on saving the track's entire <iframe> HTML to the database, and displaying this data when the saved pages are visited. 
 
@@ -94,7 +94,7 @@ The application uses 3 Django models and is mobile responsive.
 
 SoundCloud is definitely the most troublesome service. Currently their API registration is closed, so the methods and endpoints in their documention simply do not work without valid API keys. I ended up 'reverse engineering' their API to meet my needs, however this makes it fairly unstable.
 
-Given that the inputted SoundCloud link is correct, the get_artist_tracks() function in views.py tends to not retieve any data. If it fails, it will recursively call itself and try again. If I let this run infinitely, it will eventually work, but this means long load times and bad resource management. The function takes a 'tries' variable that limits how many recursive calls it makes before returning 'Failed' track data. 
+Given that the inputted SoundCloud link is correct, the get_artist_tracks() function in views.py tends to not retrieve any data. If it fails, it will recursively call itself and try again. If I let this run infinitely, it will eventually work, but this means long load times and bad resource management. The function takes a 'tries' variable that limits how many recursive calls it makes before returning 'Failed' track data. 
 
 If some of the artists fail to load SoundCloud data, just reload the page and it may work.
 
