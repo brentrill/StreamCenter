@@ -1,0 +1,32 @@
+{% extends "streamcenter/layout.html" %}
+
+{% block body %}
+    <div class="card border-secondary" style="width: 30rem;" id="login">
+        <div class="card-header"><h5>Register</h5></div>
+        <div class="card-body text-secondary">
+            {% if message %}
+                <div>{{ message }}</div>
+            {% endif %}
+
+            <form action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input class="form-control" autofocus type="text" name="username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="confirmation" placeholder="Confirm Password">
+                </div>
+                <input class="btn btn-primary" type="submit" value="Register" id="login-button">
+            </form>
+        </div>
+        <div class="card-footer">
+            Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+        </div>
+    </div>
+{% endblock %}

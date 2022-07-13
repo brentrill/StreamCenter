@@ -1,0 +1,238 @@
+html, body {
+  background: linear-gradient(60deg, #6930c3 0%, #4ea8de 100%);
+  background-repeat: no-repeat;
+  height: calc(100vh - 50px);
+}
+html .btn#login-button, body .btn#login-button {
+  background-color: #64dfdf;
+  color: #fffffc;
+  border-color: #64dfdf;
+}
+html .btn#login-button:hover, body .btn#login-button:hover {
+  background-color: #64dfdf;
+  border-color: #72efdd;
+}
+html a, body a {
+  color: #80ffdb;
+}
+html a:hover, body a:hover {
+  color: #72efdd;
+}
+html .card, body .card {
+  background-color: rgba(255, 255, 252, 0.75);
+  border-radius: 0.6rem;
+  margin: 0 auto;
+  max-height: calc(95vh - 51px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+html .card#login, body .card#login {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+  position: relative;
+  transform: translateY(50%);
+}
+html .modal-dialog, body .modal-dialog {
+  max-width: 40rem;
+}
+html #body, body #body {
+  padding-bottom: 70px;
+}
+
+#title {
+  margin: 5px 0;
+}
+
+#close-modal {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+#save-add {
+  background-color: #64dfdf;
+  color: #fffffc;
+  border-color: #64dfdf;
+}
+#save-add:hover {
+  background-color: #64dfdf;
+  border-color: #72efdd;
+}
+
+.save-button {
+  background-color: #64dfdf;
+  color: #fffffc;
+  border-color: #64dfdf;
+}
+.save-button:hover {
+  background-color: #56cfe1;
+  border-color: #56cfe1;
+}
+
+.delete-button {
+  background-color: #f07167;
+  color: #fffffc;
+  border-color: #f07167;
+}
+.delete-button:hover {
+  background-color: #ef476f;
+  border-color: #ef476f;
+}
+
+.modify-button {
+  width: 100%;
+}
+.modify-button:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 8px;
+}
+
+#fav-button, #later-button {
+  text-align: center;
+  font-size: 18px;
+  padding: 0;
+  background-color: #80ffdb;
+}
+#fav-button#fav-button, #later-button#fav-button {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0.6rem;
+  border-color: #80ffdb #80ffdb #fffffc #80ffdb;
+}
+#fav-button#later-button, #later-button#later-button {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0.6rem;
+  border-color: #fffffc #80ffdb #80ffdb #80ffdb;
+}
+
+#remove-button {
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+  padding: 0;
+  background-color: #f07167;
+  border-color: #f07167;
+  border-radius: 0.6rem 0 0 0.6rem;
+  justify-content: flex-start;
+}
+
+.saved-track {
+  display: flex;
+  flex-direction: row;
+  height: 160px;
+}
+
+#modify-card {
+  box-shadow: none;
+}
+
+#modify-header {
+  border-radius: 0.6rem;
+}
+
+.nav-item {
+  text-align: center;
+  padding-right: 16px;
+  align-self: center;
+}
+.nav-item #home-link, .nav-item #add-button, .nav-item #modify-link, .nav-item #favorites-link, .nav-item #later-link {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.navbar {
+  background: linear-gradient(#6c757d, #4f565c);
+  max-height: 99px;
+  overflow-x: auto;
+}
+
+.navbar ul {
+  list-style: none;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navbar-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.navbar-brand, .navbar-toggler {
+  padding-top: 0;
+}
+
+.nav-link {
+  padding-top: 0;
+}
+
+.navbar-toggler {
+  float: right;
+  padding-bottom: 0;
+}
+
+div.scrollmenu {
+  background-color: none;
+  overflow: auto;
+  white-space: nowrap;
+  direction: ltr;
+  scrollbar-width: thin;
+  margin-bottom: 1rem;
+}
+div.scrollmenu div {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-body {
+  overflow-y: auto;
+  direction: ltr;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+  padding-bottom: 4px;
+}
+
+.card-body::-webkit-scrollbar {
+  width: 15px;
+}
+
+.card-body::-webkit-scrollbar-track {
+  background-color: none;
+  border-radius: 100px;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #6c757d;
+  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
+}
+
+.scrollmenu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollmenu::-webkit-scrollbar-track {
+  background-color: none;
+  border-radius: 100px;
+}
+
+.scrollmenu::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #6c757d;
+  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
+}
+
+iframe {
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
