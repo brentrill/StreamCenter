@@ -18,8 +18,8 @@ from pytube import Channel, YouTube
 # that fail to receive data. However if no artists get soundcloud data, then the client_id
 # or app_version may need to be updated. I got them by inspecting the Request URLs (after 
 # filtering for 'api') in the network tab of chrome dev tools when visiting soundcloud.
-client_id = 'cvRAZnbmwcaau0MyfJTGwtUjhQNvQlio'
-app_version = '1655720042'
+client_id = 'NRS4oboQsfyLEhkEPo9yXiwxI41vKgk7'
+app_version = '1660557026'
 
 
 def index(request):
