@@ -1,7 +1,5 @@
 # StreamCenter
 
-Now deployed on Heroku: https://stream-center.herokuapp.com/
-
 Have you ever missed a song by your favorite underground artist because they thought it would be cool to release it on a single streaming service and not say anything about it? With StreamCenter you can easily stay up-to-date with your favorite popular loner musicians (some input required).
 
 Currently only for use with SoundCloud, YouTube, and Spotify, add &#65291; an artist to watch by giving them a name and their respective profile/channel/artist links. StreamCenter will then pool together the 5 latest releases on each service and display the most recent one first on the Home &#8962; page. With multiple artists added, they will be displayed in order of their most recent release. You can then listen to the songs or watch videos directly from StreamCenter!
